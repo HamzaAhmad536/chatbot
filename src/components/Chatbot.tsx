@@ -177,7 +177,8 @@ const Chatbot: React.FC = () => {
       </div>
       <form onSubmit={handleSendMessage} className="p-2 sm:p-4 border-t flex gap-2 bg-white rounded-b-2xl min-w-0">
         <input
-          className="flex-1 px-3 py-2 sm:px-4 sm:py-2 rounded-full border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-400 text-sm sm:text-base min-w-0"
+          className="flex-1 px-3 py-2 sm:px-4 sm:py-2 rounded-full border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-400 text-base min-w-0"
+          // On iOS/Android, font-size <16px causes input zoom. See: https://stackoverflow.com/a/52001811
           type="text"
           placeholder="Type your message..."
           value={input}
