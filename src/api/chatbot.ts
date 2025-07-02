@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://hamzaa982-halawabackend.hf.space';
+const API_BASE_URL = 'http://localhost:7860';
 
 export interface ChatMessage {
   sender: 'user' | 'ai';
@@ -58,7 +58,7 @@ export const sendMessage = async (message: string, sessionId?: string, userName?
 
 export const getInitialGreeting = (): ChatMessage => ({
   sender: 'ai',
-  text: "Hi! I'm your Halawa Wax AI assistant WAXBOT. I can help you with:\n\n• 📅 Booking appointments\n• 🛍️ Product recommendations\n• 💰 Service information & pricing\n• 📦 Order tracking\n• 🧴 Aftercare tips\n• ❓ General questions\n\nHow can I assist you today?",
+  text: "Hi! I'm your Halawa Wax AI assistant WAXBOT. I can help you with:\n\n• 🛍️ Product recommendations\n• 🧴 Aftercare tips\n• ❓ General questions\n\nHow can I assist you today?",
   timestamp: new Date(),
   intent: 'casual_chat'
 });
